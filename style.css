@@ -1,0 +1,55 @@
+/* 1. Target the cat breed container using the class from your HTML */
+.cat-container { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2em;
+}
+
+/* 2. For each cat breed card */
+.cat-breed {
+    flex: 1 1 300px;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /* Step 4.3: Add transition for the transform property */
+    transition: transform 0.3s;
+}
+
+/* 4. For the images within each cat breed card */
+.cat-breed img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* 5. For the headings (h3) within each cat breed card */
+.cat-breed h3 {
+    margin: 0.5em 0;
+}
+
+/* 6. For the paragraphs within each cat breed card */
+.cat-breed p {
+    margin: 0.5em 0 1em;
+}
+
+/* Step 5: Make the Layout Responsive */
+@media (max-width: 600px) {
+    .cat-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cat-breed {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* Step 6: Add Hover Effect for Cat Breed Cards */
+.cat-breed:hover {
+    transform: scale(1.05);
+}
